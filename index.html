@@ -1,0 +1,47 @@
+<!doctype html>
+<html ng-app>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+       <link rel="stylesheet" type="text/css"href="stylesheet.css">
+  </head>
+  <body>
+    <div class="one">
+        
+        <input type="text" ng-model="yourName" placeholder="Enter your name, please.">
+        <input type="text" ng-model="teacher" placeholder="Are You A teacher?">
+        
+        <hr>
+        <h1>Hello
+            <span ng-if="yourName">{{yourName}}</span>
+             <span ng-if="!yourName">___________</span> How Are You Today?
+            It is {{ teacher === 'yes' || yourName==='Ivan'}} that you are the teacher.
+         </h1>
+        
+        
+      </div>  
+        
+        
+
+       <div class="two"> 
+      <label>Noun:</label>
+      <input type="text" ng-model="noun" placeholder="Enter a plural noun">
+        <label>Verb:</label>
+        <input type="text" ng-model="verb" placeholder="Enter a verb">
+    
+        
+        
+        
+      <hr>
+        <h1>I really love to hug<span ng-if="noun"> {{noun}}</span><span ng-if="!noun">________</span>. When I can't hug<span ng-if="noun"> {{noun}}</span><span ng-if="!noun">________</span>, I like to <span ng-if="verb">{{verb}}</span><span ng-if="!verb">________</span> them.</h1>
+    </div>
+      
+      <div class="three">
+        
+        <input type="number" ng-model="yourage" placeholder="Enter your age, please.">
+    <hr>
+        <h1>You were born in: <span ng-if="yourage">{{2017 - yourage}}</span>
+            <span ng-if="!yourage">___________</span>.</h1>
+        
+      </div>  
+  </body>
+</html>
